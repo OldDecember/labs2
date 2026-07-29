@@ -1,10 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
-namespace labs2
+namespace AnimalProject.Models
 {
-    internal class Animal
+    public class Reptile : Animal
     {
+        public bool IsVenomous { get; set; }
+
+        public Reptile(string name, int age, string habitat, string diet, bool isVenomous)
+            : base(name, age, habitat, diet)
+        {
+            IsVenomous = isVenomous;
+        }
+
+        public override string GetInfo()
+        {
+            return base.GetInfo() + $", Тип: Пресмыкающееся, Ядовитость: {(IsVenomous ? "ядовито" : "неядовито")}";
+        }
     }
 }

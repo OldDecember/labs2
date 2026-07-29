@@ -1,10 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
-namespace labs2
+namespace AnimalProject.Models
 {
-    internal class Animal
+    public class Fish : Animal
     {
+        public string WaterType { get; set; }
+
+        public Fish(string name, int age, string habitat, string diet, string waterType)
+            : base(name, age, habitat, diet)
+        {
+            WaterType = waterType;
+        }
+
+        public override string GetInfo()
+        {
+            return base.GetInfo() + $", Тип: Рыба, Тип воды: {WaterType}";
+        }
     }
 }

@@ -1,10 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+// Models/Amphibian.cs
+using System;
 
-namespace labs2
+namespace AnimalProject.Models
 {
-    internal class Animal
+    public class Amphibian : Animal
     {
+        public string SkinMoisture { get; set; }
+
+        public Amphibian(string name, int age, string habitat, string diet, string skinMoisture)
+            : base(name, age, habitat, diet)
+        {
+            SkinMoisture = skinMoisture;
+        }
+
+        public override string GetInfo()
+        {
+            return base.GetInfo() + $", Тип: Земноводное, Влажность кожи: {SkinMoisture}";
+        }
     }
 }
