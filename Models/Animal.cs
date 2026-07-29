@@ -1,4 +1,4 @@
-// Models/Animal.cs
+
 using System;
 
 namespace AnimalProject.Models

@@ -1,10 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
-namespace labs2
+namespace AnimalProject.Models
 {
-    internal class Animal
+    public class Mammal : Animal
     {
+        public bool HasFur { get; set; }
+
+        public Mammal(string name, int age, string habitat, string diet, bool hasFur)
+            : base(name, age, habitat, diet)
+        {
+            HasFur = hasFur;
+        }
+
+        public override string GetInfo()
+        {
+            return base.GetInfo() + $", Тип: Млекопитающее, Шерсть: {(HasFur ? "есть" : "нет")}";
+        }
     }
 }
