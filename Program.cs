@@ -7,7 +7,7 @@ namespace AnimalProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Добро пожаловать в систему управления животными!");
+            Console.WriteLine("Добро пожаловать в систему управления животными !");
         }
     }
 }
